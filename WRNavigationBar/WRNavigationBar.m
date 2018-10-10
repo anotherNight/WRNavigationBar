@@ -431,6 +431,10 @@ static int wrPushDisplayCount = 0;
 }
 
 - (void)updateNavigationBarWithFromVC:(UIViewController *)fromVC toVC:(UIViewController *)toVC progress:(CGFloat)progress {
+#pragma mark - support black list
+	if (![WRNavigationBar needUpdateNavigationBar:toVC]) {
+        return;
+    }
     // change navBarBarTintColor
     UIColor *fromBarTintColor = [fromVC wr_navBarBarTintColor];
     UIColor *toBarTintColor = [toVC wr_navBarBarTintColor];
