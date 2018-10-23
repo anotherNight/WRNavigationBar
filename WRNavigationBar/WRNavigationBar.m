@@ -186,13 +186,13 @@ static char kWRBackgroundImageKey;
     return (UIView *)objc_getAssociatedObject(self, &kWRBackgroundViewKey);
 }
 - (void)setBackgroundView:(UIView *)backgroundView {
-    if (backgroundView) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wr_keyboardDidShow) name:UIKeyboardDidShowNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wr_keyboardWillHide) name:UIKeyboardWillHideNotification object:nil];
-    } else {
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
-    }
+    // if (backgroundView) {
+    //     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wr_keyboardDidShow) name:UIKeyboardDidShowNotification object:nil];
+    //     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wr_keyboardWillHide) name:UIKeyboardWillHideNotification object:nil];
+    // } else {
+    //     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    //     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    // }
     objc_setAssociatedObject(self, &kWRBackgroundViewKey, backgroundView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
