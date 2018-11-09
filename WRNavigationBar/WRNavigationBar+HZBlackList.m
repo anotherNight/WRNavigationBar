@@ -17,7 +17,8 @@
                                        @"TZGifPhotoPreviewController",
                                        @"TZAlbumPickerController",
                                        @"TZPhotoPreviewController",
-                                       @"TZVideoPlayerController"
+                                       @"TZVideoPlayerController",
+                                       @"TZImagePickerController",
                                        ]];
 }
 @end
